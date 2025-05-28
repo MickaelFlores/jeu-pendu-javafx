@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.pendu.view.ThemeConfigController">
+   <!-- Image de fond -->
+   <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+         <Image url="@../images/backgrounds/background_config.png" />
+      </image>
+   </ImageView>
+
+   <BorderPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+      <top>
+       <VBox alignment="CENTER" styleClass="header-container">
+       <ImageView fitHeight="150.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/configurator.png" />
+       </image>
+       </ImageView>
+       <Label alignment="CENTER" styleClass="title-label" text="Choisissez un thème">
+       <font>
+       <Font name="Arial Bold" size="24.0" />
+       </font>
+       <VBox.margin>
+       <Insets bottom="20.0" top="20.0" />
+       </VBox.margin>
+       </Label>
+       </VBox>
+      </top>
+      
+      <center>
+       <FlowPane alignment="CENTER" hgap="20" styleClass="themes-container" vgap="20">
+       <Button fx:id="btnJavaFX" styleClass="theme-button" text="JavaFX">
+       <graphic>
+       <ImageView fitHeight="92.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/javafx.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       
+       <Button fx:id="btnAnimaux" styleClass="theme-button" text="Animaux">
+       <graphic>
+       <ImageView fitHeight="90.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/animals.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       
+       <Button fx:id="btnFruits" styleClass="theme-button" text="Fruits">
+       <graphic>
+       <ImageView fitHeight="82.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/fruits.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       
+       <Button fx:id="btnCouleurs" styleClass="theme-button" text="Couleurs">
+       <graphic>
+       <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/colors.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       
+       <Button fx:id="btnPays" styleClass="theme-button" text="Pays">
+       <graphic>
+       <ImageView fitHeight="87.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/pays.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       
+       <Button fx:id="btnMetiers" styleClass="theme-button" text="Métiers">
+       <graphic>
+       <ImageView fitHeight="92.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+       <Image url="@../images/backgrounds/metiers.png" />
+       </image>
+       </ImageView>
+       </graphic>
+       </Button>
+       </FlowPane>
+      </center>
+      
+      <bottom>
+       <Button fx:id="btnToutes" prefHeight="49.0" prefWidth="760.0" styleClass="all-themes-button" text="Toutes les catégories" BorderPane.alignment="CENTER">
+       <BorderPane.margin>
+       <Insets bottom="20.0" top="20.0" />
+       </BorderPane.margin>
+       </Button>
+      </bottom>
+      
+      <padding>
+       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+   </BorderPane>
+</StackPane>

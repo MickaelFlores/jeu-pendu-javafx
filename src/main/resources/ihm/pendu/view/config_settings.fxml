@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.pendu.view.SettingsController">
+   <!-- Image de fond -->
+   <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="false">
+    <image>
+    <Image url="@../images/backgrounds/background_config.png" />
+    </image>
+   </ImageView>
+
+   <BorderPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+    <top>
+    <VBox alignment="CENTER">
+    <ImageView fitHeight="100.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+    <Image url="@../images/configurator.png" />
+    </image>
+    </ImageView>
+    <Label alignment="CENTER" prefHeight="55.0" prefWidth="340.0" styleClass="title-label" text="Paramètres du jeu">
+    <font>
+    <Font name="Arial Bold" size="20.0" />
+    </font>
+    <VBox.margin>
+    <Insets bottom="10.0" />
+    </VBox.margin>
+    </Label>
+    </VBox>
+    </top>
+    
+    <center>
+    <VBox alignment="TOP_CENTER" spacing="20">
+    <!-- Nombre d'erreurs -->
+    <VBox styleClass="setting-section">
+    <Label styleClass="setting-label" text="Nombre d'erreurs avant GameOver">
+    <font>
+    <Font name="Arial Bold" size="16.0" />
+    </font>
+    </Label>
+    
+    <HBox alignment="CENTER" spacing="10">
+    <Slider fx:id="errorSlider" blockIncrement="1" majorTickUnit="1" max="26.0" minorTickCount="0" prefHeight="38.0" prefWidth="508.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="6" />
+    
+    <TextField fx:id="errorTextField" alignment="CENTER" prefWidth="60.0" text="6" />
+    </HBox>
+    </VBox>
+    
+    <!-- Niveau de difficulté -->
+    <VBox styleClass="setting-section">
+    <Label styleClass="setting-label" text="Niveau de difficulté">
+    <font>
+    <Font name="Arial Bold" size="16.0" />
+    </font>
+    </Label>
+    
+    <MenuButton fx:id="difficultyMenu" contentDisplay="RIGHT" graphicTextGap="5.0" popupSide="RIGHT" style="-fx-background-color: #FFC107;" styleClass="dropdown-menu" text="Normal">
+    <items>
+    <MenuItem styleClass="menu-item-facile" text="Facile" />
+    <MenuItem styleClass="menu-item-normal" text="Normal" />
+    <MenuItem styleClass="menu-item-difficile" text="Difficile" />
+    <MenuItem styleClass="menu-item-expert" text="Expert" />
+    </items>
+    </MenuButton>
+    </VBox>
+    
+    <!-- Options supplémentaires -->
+    <VBox styleClass="setting-section">
+    <Label styleClass="setting-label" text="Options supplémentaires">
+    <font>
+    <Font name="Arial Bold" size="16.0" />
+    </font>
+    </Label>
+    
+    <HBox alignment="CENTER" spacing="50">
+    <CheckBox fx:id="soundOption" selected="true" text="Sons" />
+    
+    <CheckBox fx:id="animationOption" selected="true" text="Animations">
+                     <font>
+                        <Font name="Candara" size="12.0" />
+                     </font></CheckBox>
+    
+    <CheckBox fx:id="cheatOption" text="Mode triche" />
+    </HBox>
+    </VBox>
+    </VBox>
+    </center>
+    
+    <bottom>
+    <HBox alignment="CENTER" spacing="50">
+    <Button fx:id="previousButton" onAction="#handlePrevious" styleClass="navigation-button" text="Précédent" />
+    
+    <Button fx:id="saveButton" onAction="#handleSave" styleClass="save-button" text="Enregistrer" />
+    
+    <Button fx:id="nextButton" onAction="#handleNext" styleClass="navigation-button" text="Jouer" />
+    
+    <BorderPane.margin>
+    <Insets bottom="20.0" top="10.0" />
+    </BorderPane.margin>
+    </HBox>
+    </bottom>
+    
+    <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+   </BorderPane>
+</StackPane>
