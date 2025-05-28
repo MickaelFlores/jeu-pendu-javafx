@@ -8,7 +8,7 @@ Un jeu du pendu moderne et interactif développé en JavaFX lors d'un projet de 
 
 ## 📸 Aperçu
 
-*Ajoutez ici vos captures d'écran du jeu*
+*Soon...*
 
 ## 🚀 Fonctionnalités
 
