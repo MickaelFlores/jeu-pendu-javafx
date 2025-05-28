@@ -121,7 +121,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 **Mickael Flores**
 - LinkedIn : [Mickael Flores](https://www.linkedin.com/in/mickael-flores-2026692a6/)
-- Portfolio : [mickaelflores.dev](https://votre-portfolio.com)
+- Portfolio : [mickaelflores.dev](https://iam-mickael.me)
 
 ---
 
